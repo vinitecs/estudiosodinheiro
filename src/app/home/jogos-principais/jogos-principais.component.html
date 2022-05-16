@@ -1,0 +1,75 @@
+<div class="jogos-principais">
+    <div class="jogos menu">
+        <app-menu-dashboard></app-menu-dashboard>
+  </div>
+    <div class="jogos dados">
+        <div class="futures-dates">         
+            <div class="lista-datas" *ngFor="let sem of listDate"(click)="selectDayJogo(sem)">
+                <span>{{sem.label}}</span>                
+            </div>
+        </div>
+        <div  class="dados-grid" *ngFor="let list of listaDeJogos;">
+           <a class="league-title"[routerLink]="['/campeonato/'+list.league_url]">
+                <div class="tipo-liga"  >
+                    <span class="fi fi-gr"></span> 
+                    <span id="gb-eng"></span>
+                    <h1 class="title-country"> <img src="" alt="">{{list.PAIS}} </h1> - 
+                    <p class="title-league">{{list.NOME}} </p>
+                </div>
+            </a>
+            <div class="jogos default-painel">
+                <ul  style="list-style: none;" class="title"> 
+                    <li></li>             
+                   <div class="title-home">
+                       <li>Home</li>
+                       <li>Form</li>
+                   </div>
+                   <li></li>
+                   <div class="title-away">
+                       <li>Form</li>
+                       <li>Away</li> 
+                   </div>
+                    <li class="odds">odds</li>             
+                </ul>
+              <ul  class="listadeJogos" *ngFor="let lista of list.JOGOS;let i=index" [ngStyle]="istStyles(i)" style="list-style: none;">
+                <li>
+                    <span>live</span>
+                </li>
+                <li class="partidas">
+    
+                <a  class="time home" (click)="setTime(lista,lista.home_url)">
+                    <span>{{lista.home_name}}</span>
+                    <div class="time-home" [ngStyle]="winPotential(lista.home_ppg)">
+                        <span>{{lista.home_ppg.toFixed(2)}}</span>
+                    </div>
+                </a>
+    
+                <a href="#" class="placar" [routerLink]="lista.match_url" >              
+                        <span>{{lista.awayGoalCount}}</span>
+                        <span>-</span>
+                        <span>{{lista.homeGoalCount}}</span>              
+                </a>
+    
+                <a href="#" class="time away" [routerLink]="lista.away_url">
+                    <div class="time-away" [ngStyle]="winPotential(lista.away_ppg)">
+                        <span>{{lista.away_ppg.toFixed(2)}}</span>
+                    </div>
+                        <span>{{lista.away_name}}</span>
+                </a>
+                </li>
+    
+                  <li>
+                      <div class="estastisticas">
+                          <span>{{lista.odds_ft_1.toFixed(2)}}</span>
+                          <span>{{lista.odds_ft_x.toFixed(2)}}</span>
+                          <span>{{lista.odds_ft_2.toFixed(2)}}</span>
+                      </div>
+                </li>
+              </ul>
+            </div>
+         
+        </div>
+        
+
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="times">
+    <div class="coutry-league">
+            <span>{{timePrincipal.country}}</span>
+            <span>/</span>
+            <span>{{timePrincipal.campeonato}}</span>
+    </div>
+    <hr/>
+    <div class="time-default">
+        <img [src]="timePrincipal.image" alt="time">
+        <div>
+            <ul>
+                <li>  <span>{{timePrincipal.full_name}}</span></li>
+                <li><span>{{timePrincipal.table_position}}º {{timePrincipal.campeonato}}</span></li>
+            </ul>
+           
+       
+            <div> 
+          
+                <select name="ligas" id="ligas">
+                    <option  *ngFor="let camp of listaDeLig"  >{{camp.campeonato}}</option>              
+                  </select>
+                  <select   [(ngModel)]="objcA"   (change)="seleCamp(objcA)"   >       
+                    <option *ngFor="let seasons of resultado"                    
+                             [value]="seasons.TEMPORADA" (change)="[seleCamp(seasons)]"                                                                   
+                            >{{seasons.TEMPORADA}}</option>
+                </select>
+                 
+            </div>
+        </div>
+        <div>
+            <span>proximos jogos</span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>

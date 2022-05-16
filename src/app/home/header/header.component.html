@@ -1,0 +1,41 @@
+<div class="header-menu">
+
+    <ul class="buttons">
+     <li>Estudioso dinheiro</li>
+        <li><input type="text" id="search-default" placeholder="localize jogos e Ligas "></li>
+        <li class="menu-leagues" (mousemove)="estiloMenu ={display:'grid'}" (mouseout)="estiloMenu ={display:'none'}">
+            <div class="title--ligas" >Ligas</div>
+
+        </li>
+        <li><span>Jogos</span>  </li>
+        <li class="combo-menu">Status</li>
+        <li class="combo-menu">Previsões</li>
+        <li class="img-user combo-menu"> <img src="../../../assets/img/user.png" alt="foto usuario"></li>
+     
+        <li class="userLogged combo-menu">
+
+            <p>vinicius l...</p>
+            <p>10000</p>
+        </li>
+        <li class="hamburger-menu">
+            <div class="menu-hamb"></div>
+           
+        </li>
+    </ul>
+    <ul class=" countrys" [style]="estiloMenu" (mousemove)="estiloMenu ={display:'grid'}" (mouseout)="estiloMenu ={display:'none'}" > 
+      <div></div>
+        <div class="country-leagues">
+            <li *ngFor="let itens of filters"(click)="activeToggle(itens)"><span>{{itens.PAIS  }}  ({{itens.LIGA.length}})<fa-icon [icon]="itens.ACTIVE ?faChevronDown: faChevronRight"></fa-icon></span>
+                <div ngClass="{{itens.ACTIVE?'ativo':'suspense'}}" *ngFor="let league of itens.LIGA"[routerLink]="['/campeonato/'+league.league_url]" >{{league.nome}}</div>
+            </li>
+        </div>           
+        <div class="menu-champ">
+            <span class="title-header-menu">Ver todas as 1500 ligas!!</span>
+            <li>campeonatos</li>
+            <li>campeonatos</li>
+            <li>campeonatos</li>
+            <li>campeonatos</li>
+            <li>campeonatos</li> 
+        </div>
+    </ul>
+</div>
