@@ -16,12 +16,11 @@
        
             <div> 
           
-                <select name="ligas" id="ligas">
-                    <option  *ngFor="let camp of listaDeLig"  >{{camp.campeonato}}</option>              
+                <select name="ligas" id="ligas"  [(ngModel)]="objCampeonatoObj" (change)="selectCamp(objCampeonatoObj)">
+                    <option  *ngFor="let camp of listaDeLig" [ngValue]="camp"  >{{camp.campeonato}}</option>              
                   </select>
-                  <select   [(ngModel)]="objcA"   (change)="seleCamp(objcA)"   >       
-                    <option *ngFor="let seasons of resultado"                    
-                             [value]="seasons.TEMPORADA" (change)="[seleCamp(seasons)]"                                                                   
+                  <select   [(ngModel)]="objcA"  (change)="seleCamp(objcA)"   >       
+                    <option  *ngFor="let seasons of resultado"                                                                                           
                             >{{seasons.TEMPORADA}}</option>
                 </select>
                  
@@ -33,4 +32,8 @@
             <span></span>
         </div>
     </div>
+</div>
+<div>
+<app-club-submenu [tabela_campeonato]="tabela_campeonato" [dataTime]="dataTime"></app-club-submenu>
+    
 </div>
