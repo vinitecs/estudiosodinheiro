@@ -37,20 +37,20 @@
                 </li>
                 <li class="partidas">
     
-                <a  class="time home" (click)="setTime(lista,lista.home_url)">
+                <a  class="time home" (click)="setTimehome(lista,lista.home_url)">
                     <span>{{lista.home_name}}</span>
                     <div class="time-home" [ngStyle]="winPotential(lista.home_ppg)">
                         <span>{{lista.home_ppg.toFixed(2)}}</span>
                     </div>
                 </a>
     
-                <a href="#" class="placar" [routerLink]="lista.match_url" >              
+                <a class="placar" [routerLink]="lista.match_url" >              
                         <span>{{lista.awayGoalCount}}</span>
                         <span>-</span>
                         <span>{{lista.homeGoalCount}}</span>              
                 </a>
     
-                <a href="#" class="time away" [routerLink]="lista.away_url">
+                <a  class="time away"(click)="setTimeAway(lista,lista.away_url)" >
                     <div class="time-away" [ngStyle]="winPotential(lista.away_ppg)">
                         <span>{{lista.away_ppg.toFixed(2)}}</span>
                     </div>

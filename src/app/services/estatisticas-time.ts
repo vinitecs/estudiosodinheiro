@@ -19,5 +19,13 @@ export class  estatisticaTime{
                 return data
          }))
      }
+
+
+     tableChampionship(id_season:any):Observable<any>{
+        return  this.http.get(`${REST_API}league-tables?key=${key}&season_id=${id_season}`).pipe(map((data:any)=>{
+                return data
+         }))
+     }
+
     
 }

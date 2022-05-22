@@ -1,0 +1,26 @@
+<div class="tabela-campeonato">
+    <div class="data">
+        <div class="title_competition"> 
+            <h1>Campeonato</h1>
+        </div>
+       <div class="table-btn">
+            <button>TODOS</button>
+            <button>EM CASA</button>
+            <button> FORA DE CASA</button>
+       </div>
+    </div>
+    <div class="table" >
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let tab of label_tabela">{{tab.label}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tabela">
+                    <th *ngFor="let tab of label_tabela" [ngStyle]="defineStyle(tab.id,data)">{{data[tab.id]}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

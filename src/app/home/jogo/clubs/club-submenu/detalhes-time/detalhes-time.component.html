@@ -1,0 +1,16 @@
+<div class="sub--menu" *ngIf="isVisible">
+    <div class="list">
+        <button *ngFor="let btn of listBtn; let indxOf =  index;" (click)="btn.method(btn.label);"[style]="styles(btn.label)" >{{btn.label}} </button>
+    </div>
+</div>
+<div class="home">
+    <div>
+        
+    </div>
+    
+    <div class="tables">
+ 
+      <app-tabela [tabela_campeonato]="tabela_campeonato" [data_time]="data_time"></app-tabela>
+    </div>
+</div>
+

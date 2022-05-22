@@ -1,7 +1,7 @@
 <div class="header-menu">
 
     <ul class="buttons">
-     <li>Estudioso dinheiro</li>
+         <li [routerLink]="['/']">Estudioso dinheiro</li>
         <li><input type="text" id="search-default" placeholder="localize jogos e Ligas "></li>
         <li class="menu-leagues" (mousemove)="estiloMenu ={display:'grid'}" (mouseout)="estiloMenu ={display:'none'}">
             <div class="title--ligas" >Ligas</div>
@@ -10,8 +10,7 @@
         <li><span>Jogos</span>  </li>
         <li class="combo-menu">Status</li>
         <li class="combo-menu">Previsões</li>
-        <li class="img-user combo-menu"> <img src="../../../assets/img/user.png" alt="foto usuario"></li>
-     
+        <li class="img-user combo-menu"> <img src="../../../assets/imgs/user.png" alt="foto usuario"></li>     
         <li class="userLogged combo-menu">
 
             <p>vinicius l...</p>

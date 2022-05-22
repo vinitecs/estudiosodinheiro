@@ -18,6 +18,9 @@ import { TableJogosComponent } from './table-jogos/table-jogos.component';
 import { ClubsComponent } from './home/jogo/clubs/clubs.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { ClubSubmenuComponent } from './home/jogo/clubs/club-submenu/club-submenu.component';
+import { DetalhesTimeComponent } from './home/jogo/clubs/club-submenu/detalhes-time/detalhes-time.component';
+import { TabelaComponent } from './home/jogo/clubs/club-submenu/detalhes-time/tabela/tabela.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,10 @@ import { FormsModule } from '@angular/forms';
     MenuDashboardComponent,
     TableJogosComponent,
     ClubsComponent,
+    ClubSubmenuComponent,
+    DetalhesTimeComponent,
+  
+    TabelaComponent,
  
   
   ],

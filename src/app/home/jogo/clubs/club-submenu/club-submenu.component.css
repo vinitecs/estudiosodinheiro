@@ -1,0 +1,25 @@
+.sub--menu{  
+    background-color: #263045;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+button{
+    padding: 7px;
+    text-transform: uppercase;
+    margin: 3px;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #7f7f7f;
+    cursor: pointer;
+}
+
+.list{
+    width: 80%;
+    margin: auto
+}
+

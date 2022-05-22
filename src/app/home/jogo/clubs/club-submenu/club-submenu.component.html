@@ -1,0 +1,6 @@
+<div class="sub--menu">
+    <div class="list">
+        <button *ngFor="let btn of detalhesPartidaLabel; let indxOf =  index;" (click)="btn.function(btn.label);"[style]="styles(btn)" >{{btn.label}} </button>
+    </div>
+</div>
+<app-detalhes-time [tabela_campeonat]="tabela_campeonat" [dados_time]="dados_time"#detalhesTime></app-detalhes-time>

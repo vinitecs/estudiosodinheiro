@@ -1,6 +1,6 @@
 .times{
     
-    background-color: rgb(2, 16, 75);
+    background-color: #060c19;
     padding: 20px;
     color: rgb(215 216 218);
     font-family: sans-serif;
@@ -23,11 +23,11 @@ img{
 select{
     color: white;
     padding: 3px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 500;
     background: #ffffff3b;
-    border-radius: 7px;
-    margin: 0px 16px;   
+    border-radius: 3px;
+    margin: 0px 16px 0px 0px;
 }
 ul{
  

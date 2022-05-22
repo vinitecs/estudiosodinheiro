@@ -45,9 +45,11 @@ public listDate:Array<any> =[]
 public winPotential(params:any) {
   if(params <= 1){  
     return {"background-color":"#c85f46"}
-  }else if(params >1.50){
+  }else if(params >1.50 && params < 1.99){
  
-    return {"background-color":"#239954"} 
+    return {"background-color":"#91bc80"} 
+  }else if( params > 2.0 ){
+    return {"background-color":"#239954"}
   }
   else if (params >=1){
   
@@ -59,15 +61,15 @@ public winPotential(params:any) {
 public setCampeonato(param1:string,param2:string){  
   this.route.navigate([`${param1}/${param2}`])
 }
-public setTime(obj:any,rotas:string){
-
- 
- localStorage.setItem("timeId",obj.awayID)
-   this.getTime.setTime(obj)
-   this.route.navigateByUrl(rotas,obj)
-   
+public setTimeAway(obj:any,rotas:string){ 
+   localStorage.setItem("timeId",obj.awayID)
+   this.route.navigateByUrl(rotas,obj)   
 }
-
+public setTimehome(obj:any,rotas:string){ 
+  localStorage.setItem("timeId",obj.homeID)
+  this.route.navigateByUrl(rotas,obj)
+  
+}
  async ngOnInit() {
   function dateToString(d:any,sem:any,mes:any) {
    

@@ -29,7 +29,7 @@ export class jogos{
     
     public  jogos(listPaises:any):Observable<any>{
       let resultado :any  
-      return  this.http.get(`${REST_API}todays-matches?key=${key}`)
+      return  this.http.get(`${REST_API}todays-matches?key=${key}&date=2022-05-22`)
         .pipe(map((dados:any)=>{
           resultado =  dados.data
           resultado.forEach((data:any)=>{
